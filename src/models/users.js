@@ -1,6 +1,5 @@
 'use strict';
 const { Model } = require('sequelize');
-const { FOREIGNKEYS } = require('sequelize/types/query-types');
 module.exports = (sequelize, DataTypes) => {
   class Users extends Model {
     /**
@@ -10,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association (relaciones) here
-      Users.hasMany(models.Conversations, {foreingkey: 'createdBy'});
+      Users.hasMany(models.Conversations, { foreingkey: 'createdBy'});
       Users.hasMany(models.Messages, {foreingkey: 'senderId'});
       Users.hasMany(models.Participants, {foreignKey: 'usersId'});
     }

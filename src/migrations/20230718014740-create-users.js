@@ -28,9 +28,6 @@ module.exports = {
       password: {
         type: Sequelize.STRING,
         allowNull: false,
-        validate: {
-          isAlphanumeric: true
-        }
       },
       profileImage: {
         type: Sequelize.STRING
@@ -39,11 +36,11 @@ module.exports = {
         type: Sequelize.BOOLEAN
       },
       createdAt: {
-        allowNull: false,
+        
         type: Sequelize.DATE
       },
       updatedAt: {
-        allowNull: false,
+        
         type: Sequelize.DATE
       }
     });
